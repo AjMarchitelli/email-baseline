@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+    <!-- Tell iOS not to automatically link certain text strings. -->
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title></title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 23 - 41 can be safely removed. -->
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+    <style>
+      * {
+      font-family: 'Arial', sans-serif !important;
+      }
+    </style>
+    <![endif]-->
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+    <!-- Web Font / @font-face : END -->
+    <!-- CSS Reset : BEGIN -->
+    <style>
+      /* What it does: Tells the email client that only light styles are provided but the client can transform them to dark. A duplicate of meta color-scheme meta tag above. */
+      :root {
+      color-scheme: light;
+      supported-color-schemes: light;
+      }
+      /* What it does: Remove spaces around the email design added by some email clients. */
+      /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+      html,
+      body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+      }
+      /* What it does: Stops email clients resizing small text. */
+      * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      }
+      /* What it does: Centers email on Android 4.4 */
+      div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+      }
+      /* What it does: forces Samsung Android mail clients to use the entire viewport */
+      #MessageViewBody, #MessageWebViewDiv{
+      width: 100% !important;
+      }
+      /* What it does: Stops Outlook from adding extra spacing to tables. */
+      table,
+      td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+      }
+      /* What it does: Replaces default bold style. */
+      th {
+      font-weight: normal;
+      }
+      /* What it does: Fixes webkit padding issue. */
+      table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+      }
+      /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+      a {
+      text-decoration: none;
+      }
+      /* What it does: Uses a better rendering method when resizing images in IE. */
+      img {
+      -ms-interpolation-mode:bicubic;
+      }
+      /* What it does: A work-around for email clients meddling in triggered links. */
+      a[x-apple-data-detectors],  /* iOS */
+      .unstyle-auto-detected-links a,
+      .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      }
+      /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+      .im {
+      color: inherit !important;
+      }
+      /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+      .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+      }
+      /* If the above doesn't work, add a .g-img class to any image in question. */
+      img.g-img + div {
+      display: none !important;
+      }
+      /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+      /* Create one of these media queries for each additional viewport size you'd like to fix */
+      /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+      @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+      u ~ div .email-container {
+      min-width: 320px !important;
+      }
+      }
+      /* iPhone 6, 6S, 7, 8, and X */
+      @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      u ~ div .email-container {
+      min-width: 320px !important;
+      }
+      }
+      /* iPhone 6+, 7+, and 8+ */
+      @media only screen and (min-device-width: 414px) {
+      u ~ div .email-container {
+      min-width: 320px !important;
+      }
+      }
+    </style>
+    <!-- CSS Reset : END -->
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+      /* Desktop Styles */
+      .email-container{
+      width: 600px !important;
+      margin: auto !important;
+      }
+      .mobileOnly{
+      display: none !important;
+      }
+      .mobileOnly-cell{
+      display: none !important;
+      }
+      .desktopOnly{
+      display: block !important;
+      }
+      .desktopOnly-cell{
+      display: table-cell !important;
+      }
+      /* Media Queries/Mobile Styles */
+      @media screen and (max-width: 600px) {
+      .email-container{
+      width: 320px !important;
+      margin: auto !important;
+      }
+      .mobileOnly{
+      display: block !important;
+      }
+      .mobileOnly-cell{
+      display: table-cell !important;
+      }
+      .desktopOnly{
+      display: none !important;
+      }
+      .desktopOnly-cell{
+      display: none !important;
+      }
+      /* What it does: Forces table cells into full-width rows. */
+      .stack-column,
+      .stack-column-center {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      direction: ltr !important;
+      }
+      /* And center justify these ones. */
+      .stack-column-center {
+      text-align: center !important;
+      }
+      /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+      .center-on-narrow {
+      text-align: center !important;
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      float: none !important;
+      }
+      table.center-on-narrow {
+      display: inline-block !important;
+      }
+      .mobile-bar{
+      text-align: center;
+      height: 49px !important;
+      }
+      .mobile-footer{
+      padding: 0 24px 12px !important;
+      }
+      }
+    </style>
+    <!-- Progressive Enhancements : END -->
+  </head>
+  <!--
+    The email background color (#ffffff) is defined in three places:
+    1. body tag: for most email clients
+    2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+    3. mso conditional: For Windows 10 Mail
+    -->
+  <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;background-color: #ffffff; ">
+    <center role="article" aria-roledescription="email" lang="en" style="width: 100%;background-color: #ffffff; ">
+      <!--[if mso | IE]>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+        <tr>
+          <td>
+            <![endif]-->
+            <!-- Visually Hidden Preheader Text : BEGIN -->
+            <div style="max-height:0; overflow:hidden; mso-hide:all;" aria-hidden="true">
+              This text will appear in the inbox preview, but not the email body.
+            </div>
+            <!-- Visually Hidden Preheader Text : END -->
+            <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+            <!-- Preview Text Spacing Hack : BEGIN -->
+            <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family:'Arial' sans-serif;">
+              &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+            </div>
+            <!-- Preview Text Spacing Hack : END -->
+            <!--
+              Set the email width. Defined in two places:
+              1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+              2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+              -->
+            <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
+              <tr>
+                <td>
+                  <![endif]-->
+                  <!-- Email Body : BEGIN -->
+                  <table align="center" role="presentation" class="email-container" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto;">
+                    <tr>
+                      <td class="desktopOnly-cell" height="533" style="height: 533px;">
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; max-width: 600px; font-size: 0px;" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center" height="533" style="height:533px; background-image:url('images/content-bg.jpg');background-size: 600px;background-position: top center; background-repeat: no-repeat;" valign="top" width="600">
+                                <div>
+                                  <!--[if gte mso 9]>
+                                  <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 600px; height: 533px;" src="images/content-bg.jpg" />
+                                  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; top: 0px; width: 600px; height:533px">
+                                    <v:fill opacity="0%" color="#ffffff"/>
+                                    <v:textbox inset="0,0,0,0">
+                                      <![endif]-->
+                                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; font-size: 0px;" width="100%">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                <tr>
+                                                  <!-- Column : BEGIN -->
+                                                  <th valign="top" width="50%"  >
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                      <tr>
+                                                        <td width="20">&nbsp;</td>
+                                                        <td style="font-family: 'Arial', sans-serif; font-size: 15px; line-height: 20px; color: #4E7B95; text-align: left;font-weight: 400;">
+                                                          <p style="margin: 0;font-size: 14px;line-height: 16px;color:#4E7B95;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td width="20">&nbsp;</td>
+                                                        <td style="padding: 10px 0;">
+                                                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" bgcolor="#006531" align="left">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td align="center" style="font-size:12px;line-height:14px;color: #ffffff;font-family:Arial, sans-serif;padding-top:10px;padding-bottom:10px;padding-left:20px;padding-right:20px;">
+                                                                  <a href="https://google.com" target="_blank" style="text-decoration: none;color: #ffffff;"><strong>Explore your Benefits</strong></a>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                        </td>
+                                                      </tr>
+                                                      <!-- 
+                                                        <tr>
+                                                        <td>
+                                                        //Whatever else you want
+                                                        </td>
+                                                        </tr> 
+                                                        -->
+                                                    </table>
+                                                  </th>
+                                                  <!-- Column : END -->
+                                                  <!-- Column : BEGIN -->
+                                                  <th valign="top" width="50%">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                      <tr>
+                                                        <td>
+                                                          &nbsp;
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </th>
+                                                  <!-- Column : END -->
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!--[if gte mso 9]>
+                                    </v:textbox>
+                                    </v:fill>
+                                  </v:rect>
+                                  </v:image>
+                                  <![endif]-->
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <!--[if !mso]><\!-->
+                    <tr>
+                      <td class="mobileOnly-cell" height="30" style="height: 30px;">
+                        <img class="mobileOnly g-img" src="images/spacer.png" width="100%" style="width: 100%; max-width: 100%; height: 30px; background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" alt=""/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="mobileOnly-cell">
+                        <!--[if !mso]><\!-->
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; max-width: 320px; font-size: 0px;" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center"  style="height:851px; background-image:url('images/content-bg-mobile.jpg');background-size: 320px;background-position: top center; background-repeat: no-repeat;" valign="top" width="320">
+                                <div>
+                                  <!--[if gte mso 9]>
+                                  <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 320px; height: 851px;" src="images/content-bg-mobile.jpg" />
+                                  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; top: 0px; width: 320px; height:851px">
+                                    <v:fill opacity="0%" color="#ffffff"/>
+                                    <v:textbox inset="0,0,0,0">
+                                      <![endif]-->
+                                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; font-size: 0px;" width="100%">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                <tr>
+                                                  <!-- Column : BEGIN -->
+                                                  <th valign="top" width="95%"  >
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                      <tr>
+                                                        <td width="20">&nbsp;</td>
+                                                        <td style="font-family: 'Arial', sans-serif; font-size: 15px; line-height: 20px; color: #4E7B95; text-align: left;font-weight: 400;">
+                                                          <p style="margin: 0;font-size: 14px;line-height: 16px;color:#4E7B95;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td width="20">&nbsp;</td>
+                                                        <td style="padding: 10px 0;">
+                                                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" bgcolor="#006531" align="left">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td align="center" style="font-size:12px;line-height:14px;color: #ffffff;font-family:Arial, sans-serif;padding-top:10px;padding-bottom:10px;padding-left:20px;padding-right:20px;">
+                                                                  <a href="https://google.com" target="_blank" style="text-decoration: none;color: #ffffff;"><strong>Explore your Benefits</strong></a>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                        </td>
+                                                      </tr>
+                                                      <!-- 
+                                                        <tr>
+                                                        <td>
+                                                        //Whatever else you want
+                                                        </td>
+                                                        </tr> 
+                                                        -->
+                                                    </table>
+                                                  </th>
+                                                  <!-- Column : END -->
+                                                  <!-- Column : BEGIN -->
+                                                  <th valign="top" width="5%">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                      <tr>
+                                                        <td>
+                                                          &nbsp;
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </th>
+                                                  <!-- Column : END -->
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!--[if gte mso 9]>
+                                    </v:textbox>
+                                    </v:fill>
+                                  </v:rect>
+                                  </v:image>
+                                  <![endif]-->
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- <![endif]-->
+                      </td>
+                    </tr>
+                    <!-- <![endif]-->
+                  </table>
+                  <!--[if mso]>
+                </td>
+              </tr>
+            </table>
+            <![endif]-->
+            <!-- Email Body : END -->
+            <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    </center>
+  </body>
+</html>
